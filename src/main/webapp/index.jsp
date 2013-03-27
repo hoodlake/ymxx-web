@@ -24,13 +24,26 @@
 	});
 	function login(){
 		
-		$.messager.alert("系统消息","登录...","info",function(){
-			
-			$.ajax({
+		$.ajax({
+			dataType:"json",
+			url:"<%=request.getContextPath()%>/login.do",
+			type:"post",
+			data:{
+				'username':"张少举",
+				'password':"aimuchun99"
+			},
+			success:function(data){
 				
-				url:"/jweb/login.do",
-				type:"post"
-			});
+				//data = eval("\""+data+"\"");
+				if(data && data.msg == "success"){
+					
+					$.messager.alert("木屋消息","登录   成功","info");
+				
+				}else if(data.msg == "fail"){
+					
+					$.messager.alert("木屋消息","登录失败","info");
+				}
+			}
 		});
 		
 	}
