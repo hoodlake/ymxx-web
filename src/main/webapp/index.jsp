@@ -14,39 +14,41 @@
 	<script type="text/javascript" src="<%=easyUIHome%>/easyui-lang-zh_CN.js"></script>
 <title>雨幕潇潇</title>
 </head>
-<body>
-
-	<input type="button" id="login" value="登 录"/>
-	<script type="text/javascript">
-	$(function(){
-		
-		$("#login").bind("click",login);
-	});
-	function login(){
-		
-		$.ajax({
-			dataType:"json",
-			url:"<%=request.getContextPath()%>/login.do",
-			type:"post",
-			data:{
-				'username':"张少举",
-				'password':"aimuchun99"
-			},
-			success:function(data){
-				
-				//data = eval("\""+data+"\"");
-				if(data && data.msg == "success"){
+<body class="easyui-layout">
+		<div data-options="region:'north'" style=
+				"height:50px;text-align: center;vertical-align: middle;">
+			雨幕潇潇的小屋
+		</div>
+		<div data-options="region:'south',split:true" style=
+						"height:50px;text-align: center;vertical-align: middle;">
+			Copyright © 2010-2013 www.yumuxiaoxiao.com
+		</div>
+		<div data-options="region:'east',split:true" style="width:260px;">
+			<div id="calendar" class="easyui-calendar" style="width:250px;height:180px;"></div>  
+		</div>
+		<div data-options="region:'west',split:true" title="我的菜单" style="width:230px;">
+			<div class="easyui-accordion" data-options="fit:true,border:false">
+				<div title="系统结构" style="padding:10px;" >
+					<ul class="easyui-tree" data-options="url:'tree_data1.json',animate:true,dnd:true"></ul>
+				</div>
+				<div title="商品出售" style="padding:10px;">
 					
-					$.messager.alert("木屋消息","登录   成功","info");
-				
-				}else if(data.msg == "fail"){
+				</div>
+				<div title="博客分享" data-options="selected:true" style="padding:10px;">
+					content2
+				</div>
+				<div title="留言版" style="padding:10px">
+					content3
+				</div>
+			</div>
+		</div>
+		<div data-options="region:'center',title:'我的地盘'">
+			<div class="easyui-tabs" data-options="fit:true,border:false,plain:true">
+				<div title="首页" data-options="href:'_content.html'" style="padding:10px"></div>
+				<div title="表格" style="padding:5px">
 					
-					$.messager.alert("木屋消息","登录失败","info");
-				}
-			}
-		});
-		
-	}
-	</script>
+				</div>
+			</div>
+		</div>
 </body>
 </html>
