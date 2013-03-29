@@ -10,6 +10,8 @@ public class StringUtil {
 	 */
 	public static Boolean isBlank(String str){
 		
-		return str == null || "".equals(str.trim())?true:false;
+		return str == null 
+				|| "".equals(str.trim())
+				|| "null".equals(str.trim().toLowerCase()) ? true : false;
 	}
 }
