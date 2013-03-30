@@ -1,44 +1,40 @@
 package com.ymxx.jweb.action.security;
 
-import java.io.IOException;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import org.omg.CORBA.Request;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.ymxx.jweb.persistence.account.User;
 import com.ymxx.jweb.service.security.AccountService;
 
-public class UserAccessAction extends HttpServlet{
+@Controller
+@RequestMapping("/user")
+public class UserAccessAction{
 
 	private AccountService accountService = new AccountService();
-	
-	private static final long serialVersionUID = 1879758574438473553L;
 
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
+	@RequestMapping(method=RequestMethod.POST)
+	public ModelAndView doRegister(){
 		
-		resp.setContentType("application/json");
-		
-		String username = req.getParameter("username");
-		String password = req.getParameter("password");
-		
-		Boolean isGood = accountService.checkUser(username,password);
-		if(isGood){
-			System.out.println("登录成功");
-			req.getSession().setAttribute("username", new User(username,password));
-			resp.getWriter().write("{\"msg\":\"success\"}");
-		}else{
+		User user = new User("张少举","aimuchun99");
+		if(accountService.checkUser(user)){
+			try{
+				accountService.createUser(new User());
+			}catch(Exception e){
+				
+				e.printStackTrace();
+			}
 			
-			System.out.println("登录失败");
-			req.getSession().setAttribute("username", new User("",""));
-			resp.getWriter().write("{\"msg\":\"fail\"}");
 		}
-		User user = (User)req.getSession().getAttribute("username");
-		System.out.println(user.toString());
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("user/createSuccess");
+		mav.addObject("user",user);
+		return mav;
+
 	}
+	
 
 	
 }

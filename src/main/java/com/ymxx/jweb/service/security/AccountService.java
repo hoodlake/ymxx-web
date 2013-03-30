@@ -1,5 +1,7 @@
 package com.ymxx.jweb.service.security;
 
+import com.ymxx.jweb.persistence.account.User;
+
 public class AccountService {
 
 	/**
@@ -8,17 +10,20 @@ public class AccountService {
 	 * @param password
 	 * @return
 	 */
-	public Boolean checkUser(String username, String password) {
+	public Boolean checkUser(User user) {
 		
-		if(username == null || password == null){
+		if(user.getName() == null || user.getPassword() == null){
 			
 			return false;
 		}
-		if("张少举".equals(username) && "aimuchun99".equals(password)){
+		if("张少举".equals(user.getName()) && "aimuchun99".equals(user.getPassword())){
 			
 			return true;
 		}
 		return false;
 	}
-
+	public void createUser(User user)throws Exception{
+		
+		System.out.println("创建用户成功："+user.toString());
+	}
 }

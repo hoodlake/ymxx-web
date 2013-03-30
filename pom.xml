@@ -5,7 +5,7 @@
 	<groupId>com.yumuxiaoxiao</groupId>
 	<artifactId>ymxx-web</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1-RELEASE</version>
   
 	<dependencies>
 		<dependency> 
@@ -101,9 +101,6 @@
   		<dependency>
   			<groupId>com.ymxx.jdbc</groupId><artifactId>mysql-jdbc</artifactId><version>5.1.20</version>
   		</dependency>
-  		<dependency>
-  			<groupId>com.ymxx.jdbc</groupId><artifactId>mysql-jdbc</artifactId><version>5.1.20</version>
-  		</dependency>
   		
   		
   		<dependency>
@@ -116,7 +113,7 @@
   			<groupId>com.ymxx.jackson-all</groupId><artifactId>jackson-all</artifactId><version>1.9.4</version>
   		</dependency>
   		<dependency>
-  			<groupId>com.ymxx.log4j</groupId><artifactId>log4j</artifactId><version>1.2.16</version>d
+  			<groupId>com.ymxx.log4j</groupId><artifactId>log4j</artifactId><version>1.2.16</version>
   		</dependency>
   		
   		<dependency>
@@ -129,7 +126,8 @@
   			<groupId>com.jexcelapi</groupId><artifactId>jxl</artifactId><version>2.6.12</version>
   		</dependency>
 	</dependencies> 
-	
+
+
 	<build>
 		<plugins>
 			<plugin>  
@@ -144,5 +142,5 @@
 	            </configuration>  
         	</plugin>  
 		</plugins>
-	</build>
+	</build>	
 </project>
