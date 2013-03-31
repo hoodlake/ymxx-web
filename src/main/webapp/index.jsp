@@ -1,17 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%
-	String basePath = request.getContextPath();
-	String easyUIHome = basePath+"/easyui-1.3.2";
-%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" type="text/css" href="<%=easyUIHome%>/themes/default/easyui.css">
-	<link rel="stylesheet" type="text/css" href="<%=easyUIHome%>/themes/icon.css">
-	<script type="text/javascript" src="<%=easyUIHome%>/jquery-1.8.0.min.js"></script>
-	<script type="text/javascript" src="<%=easyUIHome%>/jquery.easyui.min.js"></script>
-	<script type="text/javascript" src="<%=easyUIHome%>/easyui-lang-zh_CN.js"></script>
+	<link rel="stylesheet" type="text/css" href="/resources/easyui-1.3.2/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="/resources/easyui-1.3.2/themes/icon.css">
+	<script type="text/javascript" src="/resources/easyui-1.3.2/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="/resources/easyui-1.3.2/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="/resources/easyui-1.3.2/easyui-lang-zh_CN.js"></script>
 <title>雨幕潇潇</title>
 </head>
 <body class="easyui-layout">
@@ -42,9 +38,11 @@
 				</div>
 			</div>
 		</div>
-		<div data-options="region:'center',title:'我的地盘'">
+		<div data-options="region:'center',title:'我的地盘'"> 
 			<div class="easyui-tabs" data-options="fit:true,border:false,plain:true">
-				<div title="首页" data-options="href:'_content.html'" style="padding:10px"></div>
+				<div title="首页"  style="padding:10px">
+					<a href="<%=request.getContextPath() %>/user/toRegister.jsp">注册</a>
+				</div>
 				<div title="表格" style="padding:5px">
 					
 				</div>

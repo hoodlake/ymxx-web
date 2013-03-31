@@ -1,40 +1,45 @@
 package com.ymxx.jweb.action.security;
 
-import org.omg.CORBA.Request;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ymxx.jweb.persistence.account.User;
 import com.ymxx.jweb.service.security.AccountService;
 
+//TODO debug jetty
+//TODO ajax support
+//TODO jetty hot deploy
 @Controller
 @RequestMapping("/user")
 public class UserAccessAction{
 
 	private AccountService accountService = new AccountService();
 
-	@RequestMapping(method=RequestMethod.POST)
-	public ModelAndView doRegister(){
-		
-		User user = new User("张少举","aimuchun99");
+	@RequestMapping
+	public @ResponseBody void doRegister(@RequestBody User user,
+			HttpServletResponse response)throws Exception{
+
 		if(accountService.checkUser(user)){
 			try{
-				accountService.createUser(new User());
+				accountService.createUser(user);
+				response.getWriter().write("{\"success\"}");
 			}catch(Exception e){
 				
-				e.printStackTrace();
+				response.getWriter().write("{\"fail\"}");
 			}
-			
 		}
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("user/createSuccess");
-		mav.addObject("user",user);
-		return mav;
-
 	}
-	
+	@RequestMapping(value="/toRegister")
+	public String toRegisterPage(){
+		
+		return "register";
+	}
 
 	
 }

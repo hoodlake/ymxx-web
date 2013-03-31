@@ -97,9 +97,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t</div>\r\n");
       out.write("\t\t\t</div>\r\n");
       out.write("\t\t</div>\r\n");
-      out.write("\t\t<div data-options=\"region:'center',title:'我的地盘'\">\r\n");
+      out.write("\t\t<div data-options=\"region:'center',title:'我的地盘'\"> \r\n");
       out.write("\t\t\t<div class=\"easyui-tabs\" data-options=\"fit:true,border:false,plain:true\">\r\n");
-      out.write("\t\t\t\t<div title=\"首页\" data-options=\"href:'_content.html'\" style=\"padding:10px\"></div>\r\n");
+      out.write("\t\t\t\t<div title=\"首页\"  style=\"padding:10px\">\r\n");
+      out.write("\t\t\t\t\t<a href=\"");
+      out.print(request.getContextPath() );
+      out.write("/user/toRegister.jsp\">注册</a>\r\n");
+      out.write("\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t<div title=\"表格\" style=\"padding:5px\">\r\n");
       out.write("\t\t\t\t\t\r\n");
       out.write("\t\t\t\t</div>\r\n");
