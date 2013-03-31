@@ -41,7 +41,7 @@
 		<div data-options="region:'center',title:'我的地盘'"> 
 			<div class="easyui-tabs" data-options="fit:true,border:false,plain:true">
 				<div title="首页"  style="padding:10px">
-					<a href="security">注册</a>
+					<a href="security">注            4444444册</a>
 				</div>
 				<div title="表格" style="padding:5px">
 					
