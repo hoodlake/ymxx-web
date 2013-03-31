@@ -48,5 +48,12 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			alert("fsdf");
+			$(function(){
+				
+				alert("fdsf");
+			});
+		</script>
 </body>
 </html>
