@@ -2,7 +2,7 @@ package com.ymxx.jweb.persistence.account;
 
 public class User {
 
-	private String uuid;
+	private String uuid = "fasfxsafwrewfwefewiorrjopfm";
 	private String name;
 	private String email;
 	private String password;
