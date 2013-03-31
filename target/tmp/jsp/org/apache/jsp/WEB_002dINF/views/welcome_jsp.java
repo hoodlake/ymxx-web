@@ -84,20 +84,13 @@ public final class welcome_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t<div data-options=\"region:'center',title:'我的地盘'\"> \r\n");
       out.write("\t\t\t<div class=\"easyui-tabs\" data-options=\"fit:true,border:false,plain:true\">\r\n");
       out.write("\t\t\t\t<div title=\"首页\"  style=\"padding:10px\">\r\n");
-      out.write("\t\t\t\t\t<a href=\"security\">注            4444444册</a>\r\n");
+      out.write("\t\t\t\t\t<a href=\"security\">注册</a>\r\n");
       out.write("\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t<div title=\"表格\" style=\"padding:5px\">\r\n");
       out.write("\t\t\t\t\t\r\n");
       out.write("\t\t\t\t</div>\r\n");
       out.write("\t\t\t</div>\r\n");
       out.write("\t\t</div>\r\n");
-      out.write("\t\t<script type=\"text/javascript\">\r\n");
-      out.write("\t\t\talert(\"fsdf\");\r\n");
-      out.write("\t\t\t$(function(){\r\n");
-      out.write("\t\t\t\t\r\n");
-      out.write("\t\t\t\talert(\"fdsf\");\r\n");
-      out.write("\t\t\t});\r\n");
-      out.write("\t\t</script>\r\n");
       out.write("</body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {

@@ -16,7 +16,8 @@ public class AccountService {
 			
 			return false;
 		}
-		if("张少举".equals(user.getName()) && "aimuchun99".equals(user.getPassword())){
+		if("张少举".equals(user.getName()) 
+				&& "aimuchun99".equals(user.getPassword())){
 			
 			return true;
 		}
@@ -24,6 +25,6 @@ public class AccountService {
 	}
 	public void createUser(User user)throws Exception{
 		
-		System.out.println("创建用户成功："+user.toString());
+		System.out.println("create success："+user.toString());
 	}
 }

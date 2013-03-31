@@ -1,6 +1,10 @@
 package com.ymxx.jweb.persistence.account;
 
-public class User {
+/**
+ * @author Administrator
+ *
+ */
+public class User { 
 
 	private String uuid = "fasfxsafwrewfwefewiorrjopfm";
 	private String name;
