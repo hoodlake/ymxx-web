@@ -12,18 +12,17 @@
 	
 	<!-- 属性配置文件 -->
 	<context:property-placeholder location="classpath:jdbc.properties"/>
-	<!-- 扫描并自动装配 -->
+	<!-- 扫描并自动装配,子包也会被扫描到 -->
 	<context:component-scan base-package="com.ymxx.jweb.dao" />
 	<context:component-scan base-package="com.ymxx.jweb.service" />
 	<context:component-scan base-package="com.ymxx.jweb.action" />
 	<context:annotation-config />
-	<tx:annotation-driven/>
 	<!--数据源 -->
 	<bean id="dataSource-c3p0" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
 		<property name="driverClass" value="com.mysql.jdbc.Driver"/> 
 		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/standard-ssh"/>
-		<property name="user" value="root"/>
-		<property name="password" value="aimuchun99"/>
+		<property name="user" value="${ymxx.mysql.uname_}"/>
+		<property name="password" value="${ymxx.mysql.pwd_}"/>
        	<property name="initialPoolSize" value="30"/>
 		<property name="maxPoolSize" value="50"/>
 		<property name="minPoolSize" value="20"/>
