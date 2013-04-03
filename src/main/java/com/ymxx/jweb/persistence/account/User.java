@@ -4,12 +4,12 @@ package com.ymxx.jweb.persistence.account;
  * @author Administrator
  *
  */
-public class User { 
+public class User {  
 
 	private String uuid = "fasfxsafwrewfwefewiorrjopfm";
 	private String name;
 	private String email;
-	private String password;
+	private String password; 
 	
 	
 	public User() {

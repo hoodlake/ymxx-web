@@ -3,11 +3,11 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" type="text/css" href="/resources/easyui-1.3.2/themes/default/easyui.css">
-	<link rel="stylesheet" type="text/css" href="/resources/easyui-1.3.2/themes/icon.css">
-	<script type="text/javascript" src="/resources/easyui-1.3.2/jquery-1.8.0.min.js"></script>
-	<script type="text/javascript" src="/resources/easyui-1.3.2/jquery.easyui.min.js"></script>
-	<script type="text/javascript" src="/resources/easyui-1.3.2/easyui-lang-zh_CN.js"></script>
+	<link rel="stylesheet" type="text/css" href="/jweb/resources/easyui-1.3.2/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="/jweb/resources/easyui-1.3.2/themes/icon.css">
+	<script type="text/javascript" src="/jweb/resources/easyui-1.3.2/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="/jweb/resources/easyui-1.3.2/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="/jweb/resources/easyui-1.3.2/easyui-lang-zh_CN.js"></script>
 <title>雨幕潇潇</title>
 </head>
 <body class="easyui-layout">
@@ -41,7 +41,7 @@
 		<div data-options="region:'center',title:'我的地盘'"> 
 			<div class="easyui-tabs" data-options="fit:true,border:false,plain:true">
 				<div title="首页"  style="padding:10px">
-					<a href="security">注册</a>
+					<a href="/jweb/account">注册</a>
 				</div>
 				<div title="表格" style="padding:5px">
 					

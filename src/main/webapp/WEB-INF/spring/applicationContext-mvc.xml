@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:component-scan base-package="com.ymxx.jweb.action.security" />
+	<mvc:annotation-driven />
+	<!-- 在不需要Controller处理request的情况，转向到设置的View  -->
+	<mvc:view-controller path="/" view-name="welcome"/>
+
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+	
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="messageConverters" ref="messageConverters"/>
+	</bean>
+	<util:list id="messageConverters">
+		<!-- json support -->
+		<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>
+		<!-- image support -->
+		<bean class="org.springframework.http.converter.BufferedImageHttpMessageConverter"/>
+		<!-- stream support -->
+		<bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter"/>
+		<!-- string support -->
+		<bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
+		<!-- xml support -->
+		<bean class="org.springframework.http.converter.xml.XmlAwareFormHttpMessageConverter"/>
+		
+	</util:list>
+
+</beans>

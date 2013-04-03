@@ -10,7 +10,7 @@
 	<dependencies>
 		<dependency> 
   			<groupId>com.ymxx.servlet.jsp</groupId><artifactId>jsp-api</artifactId><version>2.2</version><scope>provided</scope>
-		</dependency>
+		</dependency> 
 		<dependency> 
   			<groupId>com.ymxx.servlet</groupId><artifactId>servlet-api</artifactId><version>3.0</version><scope>provided</scope>
 		</dependency>

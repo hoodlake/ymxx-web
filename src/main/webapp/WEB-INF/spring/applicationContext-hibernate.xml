@@ -24,6 +24,7 @@
 			</props>
 		</property>
 		<property name="packagesToScan">
+			<!-- 多个包用逗号分割 -->
 			<value>com.ymxx.jweb.persistence</value>
 		</property>
 	</bean>

@@ -10,7 +10,7 @@ public class AccountService {
 	 * @param password
 	 * @return
 	 */
-	public Boolean checkRepeatUser(User user) {
+	public Boolean checkRepeatUser(User user) { 
 		
 		if(user.getName() == null || user.getPassword() == null){
 			
