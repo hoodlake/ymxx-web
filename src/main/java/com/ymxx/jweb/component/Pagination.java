@@ -14,7 +14,7 @@ public class Pagination<T> {
 	/**
 	 * 一页显示的记录数
 	 */
-	private Integer pageSize = 20;
+	private Integer pageSize = 20; 
 	/**
 	 * 页号
 	 */

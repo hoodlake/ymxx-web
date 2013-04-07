@@ -41,6 +41,8 @@
 					onclick="toMainPanel(this);">注册</a>
 				<a url="http://www.oschina.net" href="javascript:void(0);" class="easyui-linkbutton"
 					onclick="toMainPanel(this);">开源中国</a>
+				<a url="<%=basePath %>/component/cal" href="javascript:void(0);" class="easyui-linkbutton"
+					onclick="toMainPanel(this);">日历</a>
 			</div>
 			<div title="留言版" style="padding:10px">
 				

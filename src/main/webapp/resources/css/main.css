@@ -2,3 +2,87 @@ body{
 	padding:0;
 	margin:0;
 }
+
+/*calendar*/
+table.cal{
+	
+	border-collapse: separate;
+	border-spacing: 0;
+	text-align: center;
+	color:#333;
+}
+.cal th,.cal td{
+	margin: 0;
+	padding: 0;
+}
+.cal caption{
+	font-size: 1.25em;
+	padding-top: 0.692em;
+	padding-bottom: 0.692em;
+	background-color: #d4dde6
+}
+.cal caption [rel="prev"]{
+	float:left;
+	margin-left: 0.2em;
+}
+.cal caption [rel="next"]{
+	float:right;
+	margin-right: 0.2em;
+}
+.cal caption a:LINK,
+.cal caption a:VISITED {
+	text-decoration: none;
+	color: #333;
+	padding: 0 0.2em;
+}
+.cal caption a:HOVER,
+.cal caption a:ACTIVE,
+.cal caption a:FOCUS {
+	
+	background-color: #6d8ab7;
+}
+.cal thead th{
+	background-color: #d4dde6;
+	border-bottom: 1px solid #a9bacb;
+	font-size: 0.875em;
+}
+.cal tbody{
+	color:#a4a4a4;
+	text-shadow: 1px 1px 1px white;
+	background-color: #d0d9e2;
+}
+.cal tbody td{
+	border-right: 2px solid #9f9fal;
+	border-left: 2px solid #dfdfe0;
+	border-bottom: 2px solid #acacad;
+	border-top:2px solid #dfdfe0;
+}
+.cal tbody a{
+	
+	display:block;
+	text-decoration: none;
+	color:#333;
+	background-color: #c0c8d2;
+	font-weight: bold;
+	padding:0.385em 0.692em 0.308em 0.692em;
+}
+.cal tbody a:HOVER,
+.cal tbody a:FOCUS,
+.cal tbody a:ACTIVE,
+.cal tbody .selected a:LINK,
+.cal tbody .selected a:VISITED,
+.cal tbody .selected a:HOVER,
+.cal tbody .selected a:FOCUS,
+.cal tbody .selected a:ACTIVE {
+	background-color: #6d8ab7;
+	color: white;
+	text-shadow: 1px 1px 2px #22456b;
+}
+.cal tbody td:HOVER,
+.cal tbody td.selected {
+	border-top: 1px solid #2a3547;
+	border-left: 1px solid #465977;
+	border-bottom: 1px solid #576e92;
+	border-right: 1px solid #466080;
+}
+/**end of calendar*/

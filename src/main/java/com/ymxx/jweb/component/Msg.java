@@ -6,7 +6,7 @@ public class Msg {
 	private String msg = "success";
 	
 	public Msg(Boolean status, String msg) {
-		super();
+		super(); 
 		this.status = status;
 		this.msg = msg;
 	}

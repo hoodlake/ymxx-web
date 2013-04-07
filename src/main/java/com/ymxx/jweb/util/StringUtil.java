@@ -2,7 +2,7 @@ package com.ymxx.jweb.util;
 
 public class StringUtil {
 
-	private StringUtil(){}
+	private StringUtil(){} 
 	/**
 	 * 判断字符串是否为空
 	 * @param str

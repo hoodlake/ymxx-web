@@ -76,7 +76,7 @@ public class User {
 	public Integer status;
 	
 	public User() {
-		
+		 
 		super();
 	}
 	

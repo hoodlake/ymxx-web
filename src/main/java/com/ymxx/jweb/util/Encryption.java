@@ -60,7 +60,7 @@ public class Encryption {
 	 * @return
 	 * @throws IOException
 	 */
-	public static String getMD5(final File f) throws IOException {
+	public static String getMD5(File f) throws IOException {
 		// 缓冲区大小（这个可以抽出一个参数）
 		int bufferSize = 256 * 1024;
 		FileInputStream fileInputStream = null;

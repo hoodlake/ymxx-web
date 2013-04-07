@@ -23,7 +23,7 @@ public class JacksonUtil {
 		return new JacksonUtil();
 	}
 
-	private JacksonUtil() {
+	private JacksonUtil() { 
 		objectMapper = new ObjectMapper();
 		objectMapper.disable(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES);
 		objectMapper.configure(SerializationConfig.Feature.FAIL_ON_EMPTY_BEANS, false);

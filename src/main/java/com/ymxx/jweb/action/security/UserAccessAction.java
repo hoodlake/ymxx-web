@@ -29,7 +29,7 @@ public class UserAccessAction{
 	public String getCreateForm(Model model) {
 		
 		model.addAttribute(new User());
-		return "account/toRegister";
+		return "account/toRegister"; 
 	}
 	/**
 	 * @param user
