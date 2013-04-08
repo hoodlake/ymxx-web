@@ -21,6 +21,26 @@ public class DateTimeUtil {
 	 */
 	private DateTimeUtil(){}
 	/**
+	 * 根据毫秒数计算经过的时间，以时分秒的形式表示
+	 */
+	public static String getDurTime(long time){
+		time = time/1000;
+		if(time == 0){
+			return "瞬间完成";
+		}else if(time>0 && time < 60){
+			return time+" 秒";
+		}else if(time>=60 && time <3600){
+			long min = time/60;
+			long secs = time%60;
+			return min+" 分钟"+ secs +" 秒";
+		}else{
+			long hour = time/3600;
+			long min = time%3600/60;
+			long secs = time%3600%60;
+			return hour + "小时"+min+" 分钟"+ secs +" 秒";
+		}
+	}
+	/**
 	 * ignore hour,minute and second,count the days between the two parameters
 	 * @param first
 	 * @param second
@@ -178,10 +198,12 @@ public class DateTimeUtil {
 			calendar = Calendar.getInstance();
 			calendar.setTime(date); 
 			calendar.add(Calendar.DAY_OF_MONTH, day);
+			return calendar.getTime();
 		}catch (Exception e) {
 			e.printStackTrace();
+			return null;
 		}
-		return calendar.getTime();
+		
 	}
 	/**
 	 * 判断是否是同一年同一月分

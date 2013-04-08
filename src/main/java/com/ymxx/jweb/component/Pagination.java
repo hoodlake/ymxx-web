@@ -23,80 +23,70 @@ public class Pagination<T> {
 	 * 总记录数
 	 */
 	private Long totalCount = 0l;
-	
 	private List<T> pageItems;
-	
-	
-	public Pagination() {
-		super();
-	}
-	
-	
+	public Pagination() {}
 	public Pagination(Integer pageNumber,Integer pageSize ) {
-		super();
 		this.pageSize = pageSize;
 		this.pageNo = pageNumber;
 	}
-
-	
-	
 	public Pagination(HttpServletRequest request) {
-		
 		if(request == null){
-			
-			throw new YmxxException("can't construct pagination by request");
+			throw new YmxxException("Can't Construct Pagination Object by " +
+					"This HttpServletRequest Instance");
 		}
 		try{
-			int rows = Integer.valueOf(request.getParameter("rows"));
-			int page = Integer.valueOf(request.getParameter("page"));
+			int rows = Integer.valueOf(
+					request.getParameter("rows")==null?
+							"1":request.getParameter("rows"));
+			int page = Integer.valueOf(
+					request.getParameter("page")==null?
+							"20":request.getParameter("page"));
 			this.pageNo = page;
 			this.pageSize = rows;
 		}catch(NumberFormatException e){
-			
 			this.pageNo = 1;
 			this.pageSize = 20;
 		}
 	}
-
-
 	public Integer getPageSize() {
 		return pageSize;
 	}
 	public void setPageSize(Integer pageSize) {
 		this.pageSize = pageSize;
 	}
-	
 	public Integer getPageNo() {
 		return pageNo;
 	}
-
-
 	public void setPageNo(Integer pageNo) {
 		this.pageNo = pageNo;
 	}
-
-
 	public Long getTotalCount() {
 		return totalCount;
 	}
 	public void setTotalCount(Long totalCount) {
 		this.totalCount = totalCount;
 	}
-
-
 	public List<T> getPageItems() {
 		return pageItems;
 	}
-
-
 	public void setPageItems(List<T> pageItems) {
 		this.pageItems = pageItems;
 	}
+	/**
+	 * @return
+	 */
 	public String toTableJson(){
-		
 		Map<String, Object> table = new HashMap<String, Object>();
 		table.put("rows", this.pageItems);
 		table.put("total", totalCount);
+		String json = JacksonUtil.jsonUtil().formatReadAsString(table);
+		return json;
+	}
+	public static String getEmptyTableJson(){
+		
+		Map<String, Object> table = new HashMap<String, Object>();
+		table.put("rows",null);
+		table.put("total", 0);
 		String json = JacksonUtil.jsonUtil().formatReadAsString(table);
 		return json;
 	}

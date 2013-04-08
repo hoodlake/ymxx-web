@@ -86,3 +86,93 @@ table.cal{
 	border-right: 1px solid #466080;
 }
 /**end of calendar*/
+
+/** form*/
+fieldset {
+	margin: 1em 0;
+	padding: 1em;
+	border: 1px solid #ccc;
+	background: #f8f8f8;
+}
+legend {
+	font-weight: bold;
+}
+label {
+	display: block;
+	cursor: pointer;
+}
+input[type="text"],input[type="password"] {
+	width:20em;
+}
+input[type="text"]:focus,input[type="password"]:focus,textarea:focus {
+	background: #ffc;
+}
+input[type="text"],input[type="password"],textarea{
+	border-top: 2px solid #999;
+	border-left: 2px solid #999;
+	border-bottom: 2px solid #ccc;
+	border-top: 2px solid #ccc;
+}
+textarea {
+	width: 20em;
+	height: 5em;
+}
+.required {
+	font-size: 0.75em;
+	color: #760000;
+}
+label {
+	float: left;
+	width: 10em;
+	cursor: pointer;
+}
+form div{
+	clear:left;
+	position: relative;
+	margin-bottom: 0.1em;
+}
+form .feedback {
+	position: absolute;	
+	left:30em;
+	right: 0em;
+	top: 0.1em;
+	width:20em;
+	font-weight: bold;
+	color: #760000;
+	padding-left: 18px;
+	background: url("image/validatebox_warning.png") no-repeat left top;
+}
+button {
+	width: 200px;
+	height: 50px;
+	border: 1px solid #989898;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	-moz-box-shadow:2px 2px 2px #ccc;
+	-webkit-box-shadow:2px 2px 2px #ccc;
+	box-shadow:2px 2px 2px #ccc;
+	color:#fff;
+	font-size: 26px;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #666;
+}
+.searchTable{
+	width: 100%;
+	border: 1px;	
+}
+.searchTable td.show{
+	
+	width: 17%;
+	text-align: right;
+}
+.searchTable td._show{
+	
+	width: 17%;
+	text-align: right;
+}
+.searchTable td._input{
+	
+	width: 30%;
+	text-align: left;
+}
