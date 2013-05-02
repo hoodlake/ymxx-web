@@ -43,6 +43,8 @@
 					onclick="toMainPanel(this);">开源中国</a>
 				<a url="<%=basePath %>/component/cal" href="javascript:void(0);" class="easyui-linkbutton"
 					onclick="toMainPanel(this);">日历</a>
+				<a url="<%=basePath %>/filesystem" href="javascript:void(0);" class="easyui-linkbutton"
+					onclick="toMainPanel(this);">文件搜索</a>
 			</div>
 			<div title="留言版" style="padding:10px">
 				
@@ -56,10 +58,6 @@
 				style="width:100%;height:98%;">
 			
 		</iframe>
-	</div>
-	<!-- 最右边 -->
-	<div data-options="region:'east',split:true" style="width:260px;">
-		<div id="calendar" class="easyui-calendar" style="width:250px;height:180px;"></div>  
 	</div>
 	
 	<!-- 最下方 -->

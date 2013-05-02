@@ -139,9 +139,8 @@ public class Encryption {
 	 * @return
 	 */
 	public static String Base64Encrypt(byte[] bys) {
-		BASE64Encoder base = new BASE64Encoder();
-		String s = base.encode(bys);
-		return s;
+		
+		return (new BASE64Encoder()).encodeBuffer(bys);      
 	}
 
 	/**
@@ -150,9 +149,8 @@ public class Encryption {
 	 * @return
 	 * @throws IOException
 	 */
-	public static byte[] Base64Decrypt(String s) throws IOException {
-		BASE64Decoder base = new BASE64Decoder();
-		byte[] bys = base.decodeBuffer(s);
-		return bys;
+	public static byte[] Base64Decrypt(String key) throws IOException {
+		
+		return (new BASE64Decoder()).decodeBuffer(key);  
 	}
 }

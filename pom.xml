@@ -126,10 +126,17 @@
   			<groupId>com.jexcelapi</groupId><artifactId>jxl</artifactId><version>2.6.12</version>
   		</dependency>
   		<dependency>
-     <groupId>org.hibernate</groupId>
-     <artifactId>hibernate-validator</artifactId>
-     <version>4.3.1.Final</version>
- </dependency>
+     		<groupId>org.hibernate</groupId><artifactId>hibernate-validator</artifactId><version>4.3.1.Final</version>
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>com.yumuxiaoxiao</groupId><artifactId>quartz-all</artifactId><version>1.8.6</version>
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>com.ymxx</groupId><artifactId>slf4j-log4j12</artifactId><version>1.6.0</version>
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>com.ymxx</groupId><artifactId>slf4j-api</artifactId><version>1.6.0</version>
+ 		</dependency>
 	</dependencies> 
 
 

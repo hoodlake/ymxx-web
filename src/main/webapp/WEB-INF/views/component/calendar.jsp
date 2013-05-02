@@ -11,7 +11,7 @@
 	<table class="cal" summary="A calendar style date picker">
 		<caption>
 			<a href="#" rel="prev">&lt;</a>
-			January 2013
+				January 2013
 			<a href="#" rel="next">&gt;</a>
 		</caption>
 		<colgroup>
