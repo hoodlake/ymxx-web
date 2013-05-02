@@ -89,9 +89,5 @@ public class HttpUtil {
 		System.out.println("下载结束："+DateTimeUtil.date2Str(new Date(), "yyyy-MM-dd HH:mm:ss"));
 		System.out.println("用时："+time+"秒,平均下载速度："+size/time+"KB/S");
 	}
-	public static void main(String[] args) throws Exception{
-		String url = "thunder://QUFodHRwOi8vZGwzLmhkLWR2ZDkuY29tL6G+w7/I1bj80MI3MDBkdmQuY29tob80aGV5em9faGRfMDEzM19mdWxsLm1wNFpa";
-		
-		HttpUtil.downloadWithTime(decodeThunderUrl(url), "c:\\download");
-	}
+	
 }
